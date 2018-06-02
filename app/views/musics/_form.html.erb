@@ -1,4 +1,8 @@
 <%= simple_form_for(@music) do |f| %>
+
+    
+    
+    <%= f.input :image, as: :file %>
 	<div class="form-group">
 		<%= f.input :title, input_html: { class: 'form-control' } %>
 	</div>
