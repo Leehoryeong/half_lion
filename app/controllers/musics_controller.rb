@@ -13,7 +13,6 @@ class MusicsController < ApplicationController
 
     @music = current_user.musics.build  
 
-    # @music.user_id = current_user.id
 
   end
   
@@ -23,22 +22,7 @@ class MusicsController < ApplicationController
     redirect_to "/musics/#{@music.id}"
 
   end
-  
-  def create
-    @music = current_user.musics.build(music_params)
-    @music.save
-    redirect_to "/musics/#{@music.id}"
 
-
-  end
-  
-  def create
-    @music = current_user.musics.build(music_params)
-    @music.save
-    redirect_to "/musics/#{@music.id}"
-
-
-  end
     
   def edit
   end
@@ -55,13 +39,14 @@ class MusicsController < ApplicationController
   end
   
   private
-    def set_music
-      @music = Music.find(params[:id])
-    end
-
-    def music_params
-      params.require(:music).permit(:title, :content, :theme, :image)
-    end
   
+  def set_music
+    @music = Music.find(params[:id])
+  end
+
+  def music_params
+    params.require(:music).permit(:title, :content, :theme, :image)
+  end
+
     
 end
