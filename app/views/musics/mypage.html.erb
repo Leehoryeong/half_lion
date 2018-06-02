@@ -1,7 +1,20 @@
 
 
 <%= @user.name %>
-<% @user.musics.each do |music| %>
-<%= link_to (image_tag music.image.url), music %>
-<%= music.content %>
+
+<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+  <% (0..4).each do |n| %> 
+    <%= a[n] %><hr>
+      <% @user.musics.each do |music| %>
+        <% if music.theme == a[n] %> 
+          <%= music.title %>
+          <%= link_to (image_tag music.image.url), music %>
+        <% end %>
+  <% end %>
 <% end %>
+
+
+
+
+
+
