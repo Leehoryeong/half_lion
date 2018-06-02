@@ -39,11 +39,25 @@
   </div>
 </div>
 
-
-<%= link_to "New Post", new_music_path %>
-<% @musics.each do |music| %> 
-<%= music.title %>[like :  <%= music.get_upvotes.size %>]
-<%= music.theme %>
-  <%= link_to 'show', music %>
-<% end %>
-
+<div class="row justify-content-center" style="margin: 5% auto 0 auto; width: 80%">
+  <h4>오늘 당신의 기분은 어떠세요?</h4>
+  <div class="container" style="text-align: center;">
+    <div class="btn-group mr-3 mt-5 ml-3">
+    <a class="btn btn-outline-primary btn-lg" style="padding: 0 10px;">기쁨</a>
+    </div>
+    <div class="btn-group mr-3 mt-5 ml-3">
+    <a class="btn btn-outline-secondary btn-lg" style="padding: 0 10px;">슬픔</a>
+    </div>
+    <div class="btn-group mr-3 mt-5 ml-3">
+    <a class="btn btn-outline-success btn-lg" style="padding: 0 10px;">그리움</a>
+    </div>
+    <div class="btn-group mr-3 mt-5 ml-3">
+    <a class="btn btn-outline-danger btn-lg" style="padding: 0 10px;">화남</a>
+    </div>
+    <div class="btn-group mr-3 mt-5 ml-3">
+    <a class="btn btn-outline-warning btn-lg" style="padding: 0 10px;">외로움</a>
+    </div>
+    
+  </div>
+  </div>
+</div>
