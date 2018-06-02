@@ -23,10 +23,10 @@
       <div class="dropdown-menu">
         <form class="px-4 py-3">
           <% if user_signed_in? %>
-            <a class="dropdown-item" href="/mypage"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;"><%= current_user.name %></h6></a>
+            <a class="dropdown-item" href="/mypage"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">내 정보</h6></a>
             <a class="dropdown-item" href="/musics/new"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">오늘 나는</h6></a>          
             <a class="dropdown-item" href="/users/edit"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">Edit</h6></a>
-            <a class="dropdown-item" href="/users/sign_out" data-method='delete'><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;;">Sign out</h6></a>
+            <a class="dropdown-item" href="/users/sign_out" data-method='delete'><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">Sign out</h6></a>
           <% else %>
             <a class="dropdown-item" href="/users/sign_in"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">Sign in</h6></a>
             <a class="dropdown-item" href="/users/sign_up"><h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;">Sign up</h6></a>
