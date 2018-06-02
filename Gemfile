@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+
+gem 'simple_form'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'paperclip', '~> 6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

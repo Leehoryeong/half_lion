@@ -1,14 +1,16 @@
-<%= form_for(@music) do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<br>
-<%= f.label :content %>
-<%= f.text_area :content %>
-<br>
 
-
-<%= f.select(:theme, ['기뻐요', '슬퍼요', '그리워요'], {include_blank: "기분이 어때요?"}, { :class => 'my_style_class' }) %>
-<br>
-<%= f.submit value: '저장' %>
-
+<%= simple_form_for(@music) do |f| %>
+	<div class="form-group">
+		<%= f.input :title, input_html: { class: 'form-control' } %>
+	</div>
+	<br>
+	<div class="form-group">
+		<%= f.input :content, input_html: { class: 'form-control' } %>
+	</div>
+	<br>
+	<div class="form-group">
+		<%= f.select(:theme, ['기쁨', '슬픔', '그리움', '화남', '외로움'], {include_blank: "기분이 어때요?"}, { :class => 'form-control' }) %>
+		<br>
+		<%= f.button :submit, class: 'btn btn-default' %>
+	</div>
 <% end %> 
