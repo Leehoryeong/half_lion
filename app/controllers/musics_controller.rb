@@ -10,14 +10,33 @@ class MusicsController < ApplicationController
   
   
   def new
+
     @music = current_user.musics.build  
+
+    # @music.user_id = current_user.id
+
   end
   
   def create
     @music = current_user.musics.build(music_params)
     @music.save
     redirect_to "/musics/#{@music.id}"
-    
+
+  end
+  
+  def create
+    @music = current_user.musics.build(music_params)
+    @music.save
+    redirect_to "/musics/#{@music.id}"
+
+
+  end
+  
+  def create
+    @music = current_user.musics.build(music_params)
+    @music.save
+    redirect_to "/musics/#{@music.id}"
+
 
   end
     
