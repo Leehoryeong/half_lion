@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
   resources :musics
+    get "musics/:id/like" , to: "musics#upvote", as: "up_vote"
+    get "musics/:id/dislike" , to: "musics#downvote", as: "down_vote"
+    get "musics/theme", to: "musics#theme"
   root 'musics#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

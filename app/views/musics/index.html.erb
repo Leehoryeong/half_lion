@@ -39,3 +39,11 @@
   </div>
 </div>
 
+
+<%= link_to "New Post", new_music_path %>
+<% @musics.each do |music| %> 
+<%= music.title %>[like :  <%= music.get_upvotes.size %>]
+<%= music.theme %>
+  <%= link_to 'show', music %>
+<% end %>
+

@@ -4,10 +4,17 @@
 <br>
 <%= @music.content %>
 <br>
-<%= @music.theme %>
+<%= link_to @music.theme, '/musics/theme' %>
 
 <% if current_user == @music.user %>
     <%= link_to 'edit', edit_music_path %>
     <%= link_to 'delete', music_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+
+
+
+<td><%= link_to '[좋아요]', up_vote_path(@music.id) %></td>
+<td><%= @music.get_upvotes.size %></td>
+<td><%= link_to '[싫어요]', down_vote_path(@music.id) %></td>
+<td><%= @music.get_downvotes.size %></td>
 
