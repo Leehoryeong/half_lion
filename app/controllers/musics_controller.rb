@@ -17,7 +17,7 @@ class MusicsController < ApplicationController
   
   private
   def music_params
-end
+  end
   
     
 end
