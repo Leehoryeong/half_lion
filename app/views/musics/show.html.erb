@@ -5,6 +5,9 @@
 <%= @music.content %>
 <br>
 <% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+
+
+
 <% (0..4).each do |n| %>
     <% if @music.theme == a[n] %>
     <%= link_to @music.theme, "/theme#{n}" %>
