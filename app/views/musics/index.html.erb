@@ -7,10 +7,10 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active" style="height: 450px;">
-        <img class="d-block w-100" src="/assets/bts.jpg" alt="First slide">
+        <img class="d-block w-100" src="/assets/iu.jpg" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-  	    <h5 style="color: white; font-weight: bold">신나는 음악이 듣고싶을 때?</h5>
-  	    <p style="color: white">i need bts</p>
+  	    <h5 style="color: white; font-weight: bold">아이유는 항상 이쁘니까</h5>
+  	    <p style="color: white">좋은날</p>
   	  </div>
       </div>
       <div class="carousel-item" style="height: 450px;">
@@ -21,10 +21,10 @@
   	  </div>
       </div>
       <div class="carousel-item" style="height: 450px;">
-        <img class="d-block w-100" src="/assets/iu.jpg" alt="Third slide">
+        <img class="d-block w-100" src="/assets/bts.jpg" alt="Third slide">
         <div class="carousel-caption d-none d-md-block">
-  	    <h5 style="color: white; font-weight: bold">아이유는 항상 이쁘니까</h5>
-  	    <p style="color: white">좋은날</p>
+  	    <h5 style="color: white; font-weight: bold">신나는 음악이 듣고싶을 때?</h5>
+  	    <p style="color: white">방탄은 처음이지?</p>
   	  </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <% @musics.each do |music| %>
           <tr>
             <td><%= link_to (image_tag music.image.url, size: '50x50'), music %></td>
-            <td class="col-md-6 col-xs-6"><%= music.title %></td>
+            <td><%= music.title %></td>
             <td><%= music.user.present? ? music.user.name : "n/a" %></td>
             <td><%= music.theme %></td>
           </tr>
