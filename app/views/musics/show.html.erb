@@ -4,7 +4,13 @@
 <br>
 <%= @music.content %>
 <br>
-<%= link_to @music.theme, '/musics/theme' %>
+<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+<% (0..4).each do |n| %>
+    <% if @music.theme == a[n] %>
+    <%= link_to @music.theme, "/theme#{n}" %>
+    <% end %>
+<% end %>
+    
 
 <% if current_user == @music.user %>
     <%= link_to 'edit', edit_music_path %>
