@@ -1,0 +1,5 @@
+<%= link_to "New Post", new_music_path %>
+<% @musics.each do |music| %> 
+<%= music.title %>
+<%= link_to 'show', music %>
+<% end %>

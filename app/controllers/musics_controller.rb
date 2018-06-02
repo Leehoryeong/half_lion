@@ -14,8 +14,9 @@ class MusicsController < ApplicationController
   end
   
   def create
-    @music = Music.new(musci_params)
+    @music = Music.new(music_params)
     @music.save
+    redirect_to "/musics/#{@music.id}"
   end
     
   def edit
@@ -29,7 +30,7 @@ class MusicsController < ApplicationController
   
   private
     def set_music
-      @note = Note.find(params[:id])
+      @music = Music.find(params[:id])
     end
 
     def music_params
