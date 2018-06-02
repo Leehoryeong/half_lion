@@ -5,9 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-
+	<nav class="navbar sticky-top navbar-white bg-white" style="height: 15%;">
+	  <a class="navbar-brand" href="/posts/" style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+	    <img src="/assets/yoghurt.png" width="auto" height="50" class="d-inline-block align-left" >
+	    yoghurt
+	  </a>
+	</nav>
 <%= yield %>
 
 </body>
