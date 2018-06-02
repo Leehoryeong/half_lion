@@ -11,18 +11,24 @@ class MusicsController < ApplicationController
   
   def new
     @music = Music.new  
+    @music.user_id = current_user.id
   end
   
   def create
     @music = Music.new(music_params)
     @music.save
     redirect_to "/musics/#{@music.id}"
+    @music.user_id = current_user.id
+
   end
     
   def edit
   end
   
   def update
+    @music.update(music_params)
+    @music.save
+    redirect_to "/musics/#{@music.id}"
   end
   
   def destroy
