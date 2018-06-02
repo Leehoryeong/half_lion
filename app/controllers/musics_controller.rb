@@ -1,12 +1,21 @@
 class MusicsController < ApplicationController
+  before_action :set_music, only: [:show, :edit, :update, :destroy]
   
   def index
+    @musics = Music.all
   end
   
-  def new
+  def show
   end
-    
+  
+  
+  def new
+    @music = Music.new  
+  end
+  
   def create
+    @music = Music.new(musci_params)
+    @music.save
   end
     
   def edit
@@ -15,9 +24,17 @@ class MusicsController < ApplicationController
   def update
   end
   
-  private
-  def music_params
+  def delete
   end
+  
+  private
+    def set_music
+      @note = Note.find(params[:id])
+    end
+
+    def music_params
+      params.require(:music).permit(:title, :content, :theme)
+    end
   
     
 end
