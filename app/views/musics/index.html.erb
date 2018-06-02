@@ -57,7 +57,31 @@
     <div class="btn-group mr-3 mt-5 ml-3">
     <a class="btn btn-outline-warning btn-lg" style="padding: 0 10px;" href= '/theme4'>외로움</a>
     </div>
-    
   </div>
+</div>
+
+<div class="container" style="text-align: center;">
+  <div class="row justify-content-center" style="margin: 5% auto 5% auto; width: 80%">
+    <h4>다른 사람의 기분</h4>
+    <table class="table" style="margin: 8% 0;">
+      <thead>
+        <tr>
+          <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Music</th>
+          <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Story</th>
+          <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Who's?</th>
+          <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Feeling</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @musics.each do |music| %>
+          <tr>
+            <td><%= link_to (image_tag music.image.url, size: '50x50'), music %></td>
+            <td class="col-md-6 col-xs-6"><%= music.title %></td>
+            <td><%= music.user.present? ? music.user.name : "n/a" %></td>
+            <td><%= music.theme %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
   </div>
 </div>

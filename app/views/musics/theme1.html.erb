@@ -1,11 +1,35 @@
-<p>슬픔</p>
-
-<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
-
-<% @musics.each do |music| %>
-    <% if music.theme == a[1] %>
-        <%= link_to (image_tag music.image.url), music %>
-        <%= music.title %>
-    <% end %>
-<% end %>
-<%= link_to "New Post", new_music_path %>
+<div class="container" style="text-align: center;">
+	<div class="btn-group mr-3 mt-5 ml-3">
+    	<a class="navbar-brand" href="/" style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+		    <img src="/assets/yoghurt.png" width="auto" height="50" class="d-inline-block align-left" >
+		    back
+		    <img src="/assets/yoghurt.png" width="auto" height="50" class="d-inline-block align-left" >
+	  	</a>
+	</div>
+	<div class="row justify-content-center" style="margin: 5% auto 0 auto; width: 80%">
+		<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+		<table class="table">
+				<thead>
+			    <tr>
+			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Music</th>
+			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Story</th>
+			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Who's?</th>
+			    </tr>
+			  </thead>
+			<tbody>
+				<% @musics.each do |music| %>
+				    <% if music.theme == a[1] %>
+							<tr>
+								<td><%= link_to (image_tag music.image.url, size: '50x50'), music %></td>
+				        <td class="col-md-6 col-xs-6"><%= music.title %></td>
+				        <td><%= music.user.present? ? music.user.name : "n/a" %></td>
+				      </tr>
+				    <% end %>
+				<% end %>
+			</tbody>
+		</table>		
+	</div>
+	<a href="/musics/new">
+		<h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black; margin: 5% auto 0 auto;">당신의 기분을 추가해보세요</h6>
+	</a>
+</div>
