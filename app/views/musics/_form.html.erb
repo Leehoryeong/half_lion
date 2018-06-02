@@ -8,6 +8,12 @@
 		<%= f.input :content, input_html: { class: 'form-control' } %>
 	</div>
 	<br>
+
+	<div class="form-group">
+		<%= f.input :youtube, input_html: { class: 'form-control' } %>
+	</div>
+
+
 	<div class="form-group">
 		<%= f.select(:theme, ['기쁨', '슬픔', '그리움', '화남', '외로움'], {include_blank: "기분이 어때요?"}, { :class => 'form-control' }) %>
 		<br>

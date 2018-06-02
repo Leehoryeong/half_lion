@@ -75,7 +75,7 @@ class MusicsController < ApplicationController
   end
 
   def music_params
-    params.require(:music).permit(:title, :content, :theme, :image)
+    params.require(:music).permit(:title, :content, :theme, :image, :youtube)
   end
 
     
