@@ -14,10 +14,10 @@
  *= require_self
  */
 
-nav {
-	text-decoration: none;
-}
 
-a {
+button {
 	text-decoration: none;
+	color: #FAF4C0; 
+	font-weight: bold; 
+	text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
 }

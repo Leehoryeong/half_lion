@@ -1,43 +1,44 @@
-<!-- <div style="height: 1px; background-color: #FAF4C0;"></div> -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 60%; margin: 0 auto 0 auto;">
-	<ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="height: 450px;">
-      <img class="d-block w-100" src="/assets/bts.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-	    <h5 style="color: white; font-weight: bold">신나는 음악이 듣고싶을 때?</h5>
-	    <p style="color: white">i need bts</p>
-	  </div>
+<div style="background-color: black" >
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 60%; margin: 0 auto 0 auto;">
+  	<ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 450px;">
+        <img class="d-block w-100" src="/assets/bts.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+  	    <h5 style="color: white; font-weight: bold">신나는 음악이 듣고싶을 때?</h5>
+  	    <p style="color: white">i need bts</p>
+  	  </div>
+      </div>
+      <div class="carousel-item" style="height: 450px;">
+        <img class="d-block w-100" src="/assets/red.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+  	    <h5 style="color: white; font-weight: bold">영어 발음이 고민될 때?</h5>
+  	    <p style="color: white">이퓨 랔미 오~</p>
+  	  </div>
+      </div>
+      <div class="carousel-item" style="height: 450px;">
+        <img class="d-block w-100" src="/assets/iu.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+  	    <h5 style="color: white; font-weight: bold">아이유는 항상 이쁘니까</h5>
+  	    <p style="color: white">좋은날</p>
+  	  </div>
+      </div>
     </div>
-    <div class="carousel-item" style="height: 450px;">
-      <img class="d-block w-100" src="/assets/red.jpg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
-	    <h5 style="color: white; font-weight: bold">영어 발음이 고민될 때?</h5>
-	    <p style="color: white">이퓨 랔미 오~</p>
-	  </div>
-    </div>
-    <div class="carousel-item" style="height: 450px;">
-      <img class="d-block w-100" src="/assets/iu.jpg" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block">
-	    <h5 style="color: white; font-weight: bold">아이유는 항상 이쁘니까</h5>
-	    <p style="color: white">좋은날</p>
-	  </div>
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-<!-- <div style="height: 1px; background-color: #FAF4C0;"></div> -->
+
 <%= link_to "New Post", new_music_path %>
 <% @musics.each do |music| %> 
 <%= music.title %>

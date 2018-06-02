@@ -13,23 +13,23 @@
 	    <img src="/assets/yoghurt.png" width="auto" height="50" class="d-inline-block align-left" >
 	    yoghurt
 	  </a>
-       
-        <% if user_signed_in? %>
-        <%= current_user.name %>
-        <%= link_to 'myaccount',edit_user_registration_path %>
-        <%= link_to '로그 아웃', destroy_user_session_path, method: :delete %>
-        <% else %>
-        <%= link_to 'sign up',new_user_registration_path %>
-        <%= link_to 'sign in',new_user_session_path %>
-        <% end %>	  
 
+    <div class="btn-group" style="padding-right: 8%;">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: bold;">
+        yoghurting
+      </button>
+
+      <div class="dropdown-menu">
+        <form class="px-4 py-3">
+            <a class="dropdown-item" href="/users/sign_in">Sign in</a>        
+            <a class="dropdown-item" href="/users/sign_up">Sign up</a>
+            <a class="dropdown-item" href="/users/password/new">Find password</a>
+        </form>
+      </div>
+    </div>
 	  
 	</nav>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>	
        
-
-	  
 
 
        
