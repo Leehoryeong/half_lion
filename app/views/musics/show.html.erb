@@ -1,4 +1,4 @@
-<div class="container" style="text-align: center;">
+<div class="container" style="text-align: center; margin-bottom: 8%;">
 		<div class="btn-group mr-3 mt-5 ml-3">
 			<a class="navbar-brand" href="/" style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
 			  <img src="/assets/yoghurt.png" width="auto" height="50" class="d-inline-block align-left" >
@@ -12,27 +12,30 @@
 	  	<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
 				<% (0..4).each do |n| %>
 				    <% if @music.theme == a[n] %>
-				    	<%= link_to @music.theme, "/theme#{n}" %>
+				    	<%= link_to @music.theme, "/theme#{n}", style: "color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; text-decoration: none; font-size: 25px;" %>
+				    	<br>
 				    <% end %>
 				<% end %>
+				<br>
+				<% if current_user == @music.user %>
+			    <td><%= link_to 'edit', edit_music_path, style: "color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; text-decoration: none; margin: 2% 2%;" %></td>
+			    <td><%= link_to 'delete', music_path, method: :delete, data: { confirm: 'Are you sure?' }, style: "color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; text-decoration: none;" %></td>
+				<% end %>	
   		<div class="card" style="border: 2.5px solid #FAF4C0;border-radius: 10px; margin-top: 5%;">
   			<%= link_to (image_tag @music.image.url, size: '250x250') %>
 				<br>
 				<div class="card-body">
-					<%= @music.title %>
+					<h4><%= @music.title %></h4>
 					<br>
 					<%= @music.content %>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div style="text-align: right;">
-		<% if current_user == @music.user %>
-		    <%= link_to 'edit', edit_music_path %>
-		    <%= link_to 'delete', music_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>	
-	</div>
-	<td><%= link_to '[좋아요]', up_vote_path(@music.id) %></td>
+	</br>
+	
+	<td><%= link_to 'like', up_vote_path(@music.id), style: "color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; text-decoration: none;" %></td>
 	<td><%= @music.get_upvotes.size %></td>
-	<td><%= link_to '[싫어요]', down_vote_path(@music.id) %></td>
+	<td><%= link_to 'dislike', down_vote_path(@music.id), style: "color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; text-decoration: none;" %></td>
+	
 </div>
