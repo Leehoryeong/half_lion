@@ -1,0 +1,14 @@
+<%= form_for(@music) do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br>
+<%= f.label :content %>
+<%= f.text_area :content %>
+<br>
+
+
+<%= f.select(:theme, ['기뻐요', '슬퍼요', '그리워요'], {include_blank: "기분이 어때요?"}, { :class => 'my_style_class' }) %>
+<br>
+<%= f.submit value: '저장' %>
+
+<% end %> 
