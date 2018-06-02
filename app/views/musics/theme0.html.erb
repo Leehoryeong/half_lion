@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<p>기쁨</p>
+
+<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+
+<% @musics.each do |music| %>
+    <% if music.theme == a[0] %>
+        <%= link_to (image_tag music.image.url), music %>
+        <%= music.title %>
+    <% end %>
+<% end %>
+<%= link_to "New Post", new_music_path %>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x7l0kLFN6Oc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+=======
 <div class="container" style="text-align: center;">
 	<div class="btn-group mr-3 mt-5 ml-3">
     	<a class="navbar-brand" href="/" style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
@@ -29,5 +43,8 @@
 			</tbody>
 		</table>		
 	</div>
-	<%= link_to "새로운 노래", new_music_path %>
+	<a href="/musics/new">
+		<h6 style="color: #FAF4C0; font-weight: bold; text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black; margin: 5% auto 0 auto;">당신의 기분을 추가해보세요</h6>
+	</a>
 </div>
+>>>>>>> c916fcccbdeb0f8f865e76d469fd1115ed901102
