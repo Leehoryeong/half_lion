@@ -13,7 +13,7 @@
 			    <tr>
 			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Music</th>
 			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Story</th>
-			      <th style="color: #FAF4C0; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Who's?</th>
+			     
 			    </tr>
 			  </thead>
 			<tbody>
@@ -22,7 +22,7 @@
 							<tr>
 								<td><%= link_to (image_tag music.image.url, size: '50x50'), music %></td>
 				        <td class="col-md-6 col-xs-6"><%= music.title %></td>
-				        <td><%= music.user.present? ? music.user.name : "n/a" %></td>
+				        
 				      </tr>
 				    <% end %>
 				<% end %>
