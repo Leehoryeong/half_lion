@@ -40,6 +40,7 @@
 <!-- <div style="height: 1px; background-color: #FAF4C0;"></div> -->
 <%= link_to "New Post", new_music_path %>
 <% @musics.each do |music| %> 
-<%= music.title %>
-<%= link_to 'show', music %>
+<%= music.title %>[like :  <%= music.get_upvotes.size %>]
+<%= music.theme %>
+  <%= link_to 'show', music %>
 <% end %>

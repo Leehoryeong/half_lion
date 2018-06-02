@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-  before_action :set_music, only: [:show, :edit, :update, :destroy]
+  before_action :set_music, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @musics = Music.all
@@ -38,6 +38,17 @@ class MusicsController < ApplicationController
     redirect_to '/'
   end
   
+  def upvote
+    @music.upvote_from current_user
+    redirect_to :back    
+  end
+  
+  def downvote
+    @music.downvote_from current_user
+    redirect_to :back    
+  end
+  
+
   private
   
   def set_music
