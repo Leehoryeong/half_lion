@@ -1,6 +1,6 @@
 class MusicsController < ApplicationController
   before_action :set_music, only: [:show, :edit, :update, :destroy]
-  
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @musics = Music.all
   end
@@ -10,15 +10,14 @@ class MusicsController < ApplicationController
   
   
   def new
-    @music = Music.new  
-    @music.user_id = current_user.id
+    @music = current_user.musics.build  
   end
   
   def create
-    @music = Music.new(music_params)
+    @music = current_user.musics.build(music_params)
     @music.save
     redirect_to "/musics/#{@music.id}"
-    @music.user_id = current_user.id
+    
 
   end
     

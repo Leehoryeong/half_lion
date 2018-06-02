@@ -6,8 +6,7 @@
 <br>
 <%= @music.theme %>
 
-
-
-<%= link_to 'edit', edit_music_path %>
-<%= link_to 'delete', music_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+<% if current_user == @music.user %>
+    <%= link_to 'edit', edit_music_path %>
+    <%= link_to 'delete', music_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
