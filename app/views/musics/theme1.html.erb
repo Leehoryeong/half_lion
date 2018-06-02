@@ -3,7 +3,8 @@
 <% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
 
 <% @musics.each do |music| %>
-<% if music.theme == a[1] %>
-<%= music.title %>
-<% end %>
+    <% if music.theme == a[1] %>
+        <%= link_to (image_tag music.image.url), music %>
+        <%= music.title %>
+    <% end %>
 <% end %>

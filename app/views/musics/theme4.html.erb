@@ -4,6 +4,7 @@
 
 <% @musics.each do |music| %>
   <% if music.theme == a[4] %>
+    <%= link_to (image_tag music.image.url), music %>
     <%= music.title %>
   <% end %>
 <% end %>
