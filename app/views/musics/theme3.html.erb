@@ -1,0 +1,9 @@
+<p>화남</p>
+
+<% a = ["기쁨", "슬픔", "그리움", "화남", "외로움"] %>
+
+<% @musics.each do |music| %>
+<% if music.theme == a[3] %>
+<%= music.title %>
+<% end %>
+<% end %>

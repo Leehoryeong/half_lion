@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :musics
     get "musics/:id/like" , to: "musics#upvote", as: "up_vote"
     get "musics/:id/dislike" , to: "musics#downvote", as: "down_vote"
-    get "musics/theme", to: "musics#theme"
+    get "/mypage", to: "musics#mypage"
+    get "/theme0", to: "musics#theme0"
+    get "/theme1", to: "musics#theme1"
+    get "/theme2", to: "musics#theme2"
+    get "/theme3", to: "musics#theme3"
+    get "/theme4", to: "musics#theme4"
   root 'musics#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

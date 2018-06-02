@@ -1,0 +1,7 @@
+
+
+<%= @user.name %>
+<% @user.musics.each do |music| %>
+<%= link_to (image_tag music.image.url), music %>
+<%= music.content %>
+<% end %>

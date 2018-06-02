@@ -1,8 +1,8 @@
 class MusicsController < ApplicationController
   before_action :set_music, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_action :set_theme, only: [:index, :theme0, :theme1, :theme2, :theme3, :theme4]
   before_action :authenticate_user!, except: [:index, :show]
   def index
-    @musics = Music.all
   end
   
   def show
@@ -48,8 +48,27 @@ class MusicsController < ApplicationController
     redirect_to :back    
   end
   
+  def mypage
+    @user = current_user
+  end
+  
+  def theme0
+  end
+  def theme1
+  end
+  def theme2
+  end
+  def theme3
+  end
+  def theme4
+  end
+  
+  
 
   private
+  def set_theme
+    @musics = Music.all
+  end
   
   def set_music
     @music = Music.find(params[:id])
