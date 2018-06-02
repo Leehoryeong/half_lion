@@ -25,7 +25,9 @@ class MusicsController < ApplicationController
   def update
   end
   
-  def delete
+  def destroy
+    @music.destroy
+    redirect_to '/'
   end
   
   private
